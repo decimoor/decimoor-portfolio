@@ -3,29 +3,32 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/components/Header";
+import PageTransition from "@/components/PageTransition";
 
 const jetBrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-jetbrainsMono",
-})
+    subsets: ["latin"],
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+    variable: "--font-jetbrainsMono",
+});
 
 export const metadata: Metadata = {
-  title: "Decimoor",
-  description: "Decimoor`s porfolio",
+    title: "Decimoor",
+    description: "Decimoor`s porfolio",
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={`${jetBrainsMono.variable}`}>
-        <Header />
-        {children}
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body className={`${jetBrainsMono.variable}`}>
+                <Header />
+                <PageTransition>
+                  {children}
+                </PageTransition>
+            </body>
+        </html>
+    );
 }
