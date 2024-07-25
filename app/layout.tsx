@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
+import Header from "@/components/Header";
+
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-jetbrains",
+  variable: "--font-jetbrainsMono",
 })
 
 export const metadata: Metadata = {
@@ -20,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={jetBrainsMono.variable}>{children}</body>
+      <body className={`${jetBrainsMono.variable}`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
