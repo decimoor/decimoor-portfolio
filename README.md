@@ -1,2 +1,0 @@
-# decimoor-portfolio
-My Portfolio
