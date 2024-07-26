@@ -1,8 +1,7 @@
 import Image from "next/image";
 import getConfig from "next/config";
 
-const { publicRuntimeConfig } = getConfig();
-const { basePath } = publicRuntimeConfig;
+
 
 interface Interface {
     projectName: string;
@@ -24,7 +23,7 @@ export default function Project({
             <span className={`z-20 ${textColor} group-hover:opacity-0 duration-150 transition-all`}>
                 {projectName}
             </span>
-            <img src={`${basePath}${imageUrl}`} alt="" className="object-cover" />
+            <img src={`/decimoor-portfolio${imageUrl}`} alt="" className="object-cover" />
             {/* describtion */}
             <div className="absolute bottom-[-100%] left-0 w-full h-1/3 group-hover:bottom-0 transition-all ease-in-out duration-500 bg-black/40 p-3">
                 {shortDescription}
