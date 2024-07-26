@@ -4,16 +4,18 @@ interface Interface {
     projectName: string;
     shortDescription: string;
     imageUrl: string;
+    textColor: string;
 }
 
 export default function Project({
     projectName,
     shortDescription,
     imageUrl,
+    textColor,
 }: Interface) {
     return (
         <div className="w-full h-full relative bg-accent rounded-md flex flex-col-reverse p-3 relative group hover:bg-accent/90 duration-300 transition-all overflow-hidden">
-            <span className="z-20 group-hover:opacity-0 duration-150 transition-all">
+            <span className={`z-20 ${textColor} group-hover:opacity-0 duration-150 transition-all`}>
                 {projectName}
             </span>
             <Image src={imageUrl} alt="" fill className="object-cover" />

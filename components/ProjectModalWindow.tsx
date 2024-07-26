@@ -10,6 +10,8 @@ import {
     DialogTitle,
     DialogTrigger,
   } from "@/components/ui/dialog"
+import Link from "next/link";
+import { Button } from "./ui/button";
 
 
 interface Interface {
@@ -17,11 +19,12 @@ interface Interface {
     imageUrl: string,
     projectName: string,
     responsobilities: string[],
-    technologies: string[]
+    technologies: string[],
+    link: string;
 }
   
 
-export default function ProjectModalWindow({children, imageUrl, projectName, responsobilities, technologies}: Interface) {
+export default function ProjectModalWindow({children, imageUrl, projectName, responsobilities, technologies, link}: Interface) {
     return (
         <Dialog>
             <DialogTrigger className="w-full h-[300px]">
@@ -64,6 +67,12 @@ export default function ProjectModalWindow({children, imageUrl, projectName, res
                             }
                         </ul>
                     </span>
+                    <div className="w-full h-[1px] bg-white my-2"></div>
+                    <Link href={link} target="_blank" className="w-full">
+                            <Button className="w-full">
+                                Посетить сайт
+                            </Button>
+                    </Link>
 
                 </DialogDescription>
             </DialogContent>
