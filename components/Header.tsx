@@ -17,15 +17,6 @@ export default function Header() {
                     </h1>
                 </Link>
 
-                <div className="hidden xl:flex gap-8 items-center">
-                    <Nav />
-                    <Link href="/contact">
-                        <Button>
-                            Hire me
-                        </Button>
-                    </Link>
-                </div>
-
                 <div className="xl:hidden">
                     <MobileNav />
                 </div>
