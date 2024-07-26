@@ -232,7 +232,7 @@ export default function Works() {
                 transition: { delay: 2.4, duraion: 0.4, ease: "easeIn" },
             }}
             className="min-h-[80vh] py-12 xl:py-0">
-            <div className="container mx-auto grid grid-cols-2 lg:grid-cols-3 gap-12">
+            <div className="container mx-auto grid grid-cols-1  sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-12">
                 {works.map((work, index) => {
                     return (
                         <div className="w-full h-full" key={index}>

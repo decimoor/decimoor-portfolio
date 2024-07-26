@@ -30,12 +30,12 @@ export default function ProjectModalWindow({children, imageUrl, projectName, res
             <DialogTrigger className="w-full h-[300px]">
                 {children}
             </DialogTrigger>
-            <DialogContent className="w-fit max-w-fit">
+            <DialogContent className="lg:w-fit lg:max-w-fit w-screen">
                 <DialogTitle>
                     {projectName}
                 </DialogTitle>
-                <div className="w-[600px] max-w-screen h-[600px] relative">
-                    <img src={`/decimoor-portfolio${imageUrl}`} className="object-cover" alt=""/>
+                <div className="w-full h-[200px] lg:w-[600px] max-w-screen lg:h-[600px] relative">
+                    <img src={`/decimoor-portfolio${imageUrl}`} className="object-cover absolute w-full h-full left-0 bottom-0" alt=""/>
                 </div>
                 <DialogDescription className="bg-primary p-5">
                     <span>

@@ -23,7 +23,7 @@ export default function Project({
             <span className={`z-20 ${textColor} group-hover:opacity-0 duration-150 transition-all`}>
                 {projectName}
             </span>
-            <img src={`/decimoor-portfolio${imageUrl}`} alt="" className="object-cover" />
+            <img src={`/decimoor-portfolio${imageUrl}`} alt="" className="object-cover absolute w-full h-full left-0 bottom-0" />
             {/* describtion */}
             <div className="absolute bottom-[-100%] left-0 w-full h-1/3 group-hover:bottom-0 transition-all ease-in-out duration-500 bg-black/40 p-3">
                 {shortDescription}
