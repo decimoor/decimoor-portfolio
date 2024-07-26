@@ -3,9 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { CiMenuFries } from "react-icons/ci";
-import { Key } from "react";
 
 type ILink = {
     name: string;
@@ -13,26 +12,10 @@ type ILink = {
 };
 
 const links: ILink[] = [
-    {
-        name: "Главная",
-        path: "/",
-    },
-    {
-        name: "Навыки",
-        path: "/skills",
-    },
-    {
-        name: "Резюме",
-        path: "/resume",
-    },
-    {
-        name: "Работы",
-        path: "/work",
-    },
-    {
-        name: "Связаться",
-        path: "/contact",
-    },
+    { name: "Главная", path: "/" },
+    { name: "Навыки", path: "/skills" },
+    { name: "Резюме", path: "/resume" },
+    { name: "Работы", path: "/work" },
 ];
 
 export default function MobileNav() {
@@ -45,9 +28,7 @@ export default function MobileNav() {
             </SheetTrigger>
             <SheetContent className="flex flex-col bg-primary">
                 <div className="mt-32 mb-40 text-center text-2xl flex items-center justify-center">
-                    <Link
-                        href="/"
-                        className="w-fit">
+                    <Link href="/" className="w-fit">
                         <h1 className="text-4xl font-semibold relative group w-fit">
                             decimoor
                             <div className="absolute left-0 bottom-0 w-[3px] h-[3px] bg-accent group-hover:w-full transition-all duration-300"></div>
@@ -56,19 +37,18 @@ export default function MobileNav() {
                 </div>
 
                 <nav className="flex flex-col justify-center items-center gap-8">
-                    {links.map((link: ILink, index: Key) => {
-                        return (
+                    {links.map((link) => (
+                        <SheetClose asChild key={link.path}>
                             <Link
                                 href={link.path}
-                                key={index}
                                 className={` ${
                                     link.path === pathname &&
                                     "text-accent border-b-2 border-accent"
                                 } text-xl capitalize hover:text-accent transition-all`}>
                                 {link.name}
                             </Link>
-                        );
-                    })}
+                        </SheetClose>
+                    ))}
                 </nav>
             </SheetContent>
         </Sheet>

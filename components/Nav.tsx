@@ -27,10 +27,6 @@ const links: ILink[] = [
         name: "Работы",
         path: "/work",
     },
-    {
-        name: "Связаться",
-        path: "/contact",
-    },
 ]
 
 export default function Nav() {
