@@ -30,7 +30,7 @@ export default function ProjectModalWindow({children, imageUrl, projectName, res
             <DialogTrigger className="w-full h-[300px]">
                 {children}
             </DialogTrigger>
-            <DialogContent className="lg:w-fit lg:max-w-fit w-screen">
+            <DialogContent className="lg:w-fit lg:max-w-fit w-screen max-h-screen overflow-y-auto">
                 <DialogTitle>
                     {projectName}
                 </DialogTitle>
