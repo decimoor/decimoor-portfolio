@@ -5,6 +5,9 @@ const nextConfig = {
   basePath: "/decimoor-portfolio",
   assetPrefix: "/decimoor-portfolio/",
   trailingSlash: true,
+  publicRuntimeConfig: {
+    basePath: "/decimoor-portfolio",
+  },
 };
 
 export default nextConfig;

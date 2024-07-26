@@ -35,7 +35,7 @@ export default function ProjectModalWindow({children, imageUrl, projectName, res
                     {projectName}
                 </DialogTitle>
                 <div className="w-[600px] max-w-screen h-[600px] relative">
-                    <Image src={`/decimoor-portfolio${imageUrl}`} fill className="object-cover" alt=""/>
+                    <img src={`/decimoor-portfolio${imageUrl}`} fill className="object-cover" alt=""/>
                 </div>
                 <DialogDescription className="bg-primary p-5">
                     <span>
