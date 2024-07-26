@@ -7,6 +7,8 @@ interface Interface {
     textColor: string;
 }
 
+const a = 1;
+
 export default function Project({
     projectName,
     shortDescription,
