@@ -28,12 +28,14 @@ export default function MobileNav() {
             </SheetTrigger>
             <SheetContent className="flex flex-col bg-primary">
                 <div className="mt-32 mb-40 text-center text-2xl flex items-center justify-center">
-                    <Link href="/" className="w-fit">
-                        <h1 className="text-4xl font-semibold relative group w-fit">
-                            decimoor
-                            <div className="absolute left-0 bottom-0 w-[3px] h-[3px] bg-accent group-hover:w-full transition-all duration-300"></div>
-                        </h1>
-                    </Link>
+                    <SheetClose asChild>
+                        <Link href="/" className="w-fit">
+                            <h1 className="text-4xl font-semibold relative group w-fit">
+                                decimoor
+                                <div className="absolute left-0 bottom-0 w-[3px] h-[3px] bg-accent group-hover:w-full transition-all duration-300"></div>
+                            </h1>
+                        </Link>
+                    </SheetClose>
                 </div>
 
                 <nav className="flex flex-col justify-center items-center gap-8">
