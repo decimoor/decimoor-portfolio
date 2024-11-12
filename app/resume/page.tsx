@@ -8,6 +8,8 @@ import {
     FaFigma,
     FaNodeJs,
 } from "react-icons/fa";
+import { SiMobx } from "react-icons/si";
+
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
@@ -98,9 +100,9 @@ const education = {
 
 //skills data
 const skills = {
-    title: "My skills",
+    title: "Мои навыки",
     describtion:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, et? Explicabo sed distinctio, neque debitis molestias doloremque.",
+        "Обладаю широким спектром навыков в разработке веб приложений.",
     skillList: [
         {
             icon: <FaHtml5 />,
@@ -134,6 +136,10 @@ const skills = {
             icon: <FaFigma />,
             name: "figma",
         },
+        {
+            icon: <SiMobx />,
+            name: "mobx",
+        }
     ],
 };
 
